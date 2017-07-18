@@ -23,6 +23,7 @@ public class Main extends JavaPlugin{
         this.getServer().getPluginManager().registerEvents(new Events(), this);
     }
     
+    
     public void init() {
         final File file = new File(this.getDataFolder().getPath(), "config.yml");
         final YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
