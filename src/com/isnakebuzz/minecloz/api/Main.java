@@ -10,7 +10,6 @@ public class Main extends JavaPlugin{
     
     // publics :) //
     public static MySQL mysql;
-    private Events e;
     public static Main INSTANCE;
     
     @Override
