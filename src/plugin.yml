@@ -1,0 +1,4 @@
+name: MineclozAPI
+version: 0.1
+main: com.isnakebuzz.minecloz.api.Main
+website: https://www.isnakebuzz.com/pricings.html

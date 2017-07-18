@@ -1,0 +1,6 @@
+MySQL:
+  hostname: 127.0.0.1
+  port: 3306
+  database: Data-API
+  username: Api
+  password: xd
