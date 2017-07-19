@@ -5,6 +5,7 @@ import com.isnakebuzz.minecloz.listeners.Events;
 import java.io.File;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class Main extends JavaPlugin{
     
@@ -21,6 +22,14 @@ public class Main extends JavaPlugin{
         MySQL.connect();
         MySQL.update("CREATE TABLE IF NOT EXISTS Data_API (Name VARCHAR(100), Ashots long, Ahits long)");
         this.getServer().getPluginManager().registerEvents(new Events(), this);
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                if (!MySQL.isConnected()){
+                    MySQL.connect();
+                }
+            }
+        }.runTaskTimer(this, 240 * 20, 240 * 20);
     }
     
     
